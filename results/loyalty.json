@@ -1,0 +1,468 @@
+{
+  "n_train": 103904,
+  "n_test": 25976,
+  "loyal_rate": 0.8173217585463505,
+  "genz_loyal_rate": 0.6255168340224454,
+  "reproduce": {
+    "auc": 0.9963129051881389,
+    "accuracy": 0.985234403839055,
+    "n_test": 5418
+  },
+  "crosstab_travel": {
+    "Business travel": {
+      "Loyal Customer": 0.7374,
+      "disloyal Customer": 0.2626
+    },
+    "Personal Travel": {
+      "Loyal Customer": 0.9949,
+      "disloyal Customer": 0.0051
+    }
+  },
+  "loyal_by_generation": {
+    "Gen Z (27 and under)": 0.6255,
+    "Millennial": 0.8076,
+    "Gen X": 0.9438,
+    "Boomer": 0.9565
+  },
+  "ablation": [
+    {
+      "inputs": "Majority guess (everyone loyal)",
+      "all": {
+        "auc": 0.5,
+        "accuracy": 0.8152525408068987
+      },
+      "genz": {
+        "auc": 0.5,
+        "accuracy": 0.607505980861244
+      }
+    },
+    {
+      "inputs": "Age only",
+      "all": {
+        "auc": 0.7933003004484287,
+        "accuracy": 0.8169079149984602
+      },
+      "genz": {
+        "auc": 0.6731514363067402,
+        "accuracy": 0.6217105263157895
+      }
+    },
+    {
+      "inputs": "Age + travel type",
+      "all": {
+        "auc": 0.8807963004601578,
+        "accuracy": 0.8572913458577148
+      },
+      "genz": {
+        "auc": 0.8452218510835297,
+        "accuracy": 0.7721291866028708
+      }
+    },
+    {
+      "inputs": "Age + travel type + class",
+      "all": {
+        "auc": 0.9011985948064943,
+        "accuracy": 0.8756159531875577
+      },
+      "genz": {
+        "auc": 0.9221230852173506,
+        "accuracy": 0.829994019138756
+      }
+    },
+    {
+      "inputs": "All capstone inputs",
+      "all": {
+        "auc": 0.9966841658066464,
+        "accuracy": 0.9886818601786265
+      },
+      "genz": {
+        "auc": 0.9970632068727072,
+        "accuracy": 0.9843002392344498
+      }
+    },
+    {
+      "inputs": "Service ratings only (14)",
+      "all": {
+        "auc": 0.951499508164168,
+        "accuracy": 0.9083769633507853
+      },
+      "genz": {
+        "auc": 0.8847238376522157,
+        "accuracy": 0.8098086124401914
+      }
+    },
+    {
+      "inputs": "Everything except age, travel type, class",
+      "all": {
+        "auc": 0.9589250637097853,
+        "accuracy": 0.9115722205112411
+      },
+      "genz": {
+        "auc": 0.906452703257035,
+        "accuracy": 0.8217703349282297
+      }
+    }
+  ],
+  "within_travel": {
+    "business": {
+      "auc": 0.9983404067983721,
+      "accuracy": 0.9828694977270207,
+      "loyal_rate": 0.7360017740325978,
+      "n_test": 18038
+    },
+    "personal": {
+      "auc": 0.6396111337258027,
+      "accuracy": 0.9952128999748048,
+      "loyal_rate": 0.9953388762912573,
+      "n_test": 7938
+    }
+  },
+  "service_importance": {
+    "Departure/Arrival time convenient": 0.2435,
+    "Ease of Online booking": 0.1682,
+    "Online boarding": 0.1355,
+    "Gate location": 0.0848,
+    "Inflight wifi service": 0.0685,
+    "Seat comfort": 0.0537,
+    "Inflight entertainment": 0.053,
+    "Food and drink": 0.041,
+    "Inflight service": 0.0327,
+    "Cleanliness": 0.0291,
+    "On-board service": 0.0268,
+    "Baggage handling": 0.0266,
+    "Checkin service": 0.021,
+    "Leg room service": 0.0155
+  },
+  "rating_gap_loyal_minus_disloyal": {
+    "Departure/Arrival time convenient": 0.816,
+    "Online boarding": 0.661,
+    "Seat comfort": 0.544,
+    "Inflight entertainment": 0.379,
+    "Cleanliness": 0.284,
+    "Food and drink": 0.205,
+    "On-board service": 0.189,
+    "Leg room service": 0.163,
+    "Checkin service": 0.105,
+    "Ease of Online booking": 0.071,
+    "Inflight wifi service": 0.026,
+    "Gate location": -0.02,
+    "Inflight service": -0.069,
+    "Baggage handling": -0.076
+  },
+  "combos": {
+    "age": {
+      "all": {
+        "auc": 0.7933003004484287,
+        "accuracy": 0.8169079149984602
+      },
+      "genz": {
+        "auc": 0.6731514363067402,
+        "accuracy": 0.6217105263157895
+      }
+    },
+    "travel": {
+      "all": {
+        "auc": 0.6826917554353864,
+        "accuracy": 0.8152525408068987
+      },
+      "genz": {
+        "auc": 0.8135143396270643,
+        "accuracy": 0.774072966507177
+      }
+    },
+    "cls": {
+      "all": {
+        "auc": 0.5804812399775208,
+        "accuracy": 0.8152525408068987
+      },
+      "genz": {
+        "auc": 0.5488536033660326,
+        "accuracy": 0.607505980861244
+      }
+    },
+    "service": {
+      "all": {
+        "auc": 0.951499508164168,
+        "accuracy": 0.9083769633507853
+      },
+      "genz": {
+        "auc": 0.8847238376522157,
+        "accuracy": 0.8098086124401914
+      }
+    },
+    "other": {
+      "all": {
+        "auc": 0.6695558485641364,
+        "accuracy": 0.8148290729904527
+      },
+      "genz": {
+        "auc": 0.6241170141696846,
+        "accuracy": 0.5955442583732058
+      }
+    },
+    "age+travel": {
+      "all": {
+        "auc": 0.8807963004601578,
+        "accuracy": 0.8572913458577148
+      },
+      "genz": {
+        "auc": 0.8452218510835297,
+        "accuracy": 0.7721291866028708
+      }
+    },
+    "age+cls": {
+      "all": {
+        "auc": 0.8057913581912022,
+        "accuracy": 0.8305358792731753
+      },
+      "genz": {
+        "auc": 0.7276843524020487,
+        "accuracy": 0.6668660287081339
+      }
+    },
+    "age+service": {
+      "all": {
+        "auc": 0.9665114945255029,
+        "accuracy": 0.9173082845703726
+      },
+      "genz": {
+        "auc": 0.9162968015658146,
+        "accuracy": 0.8340311004784688
+      }
+    },
+    "age+other": {
+      "all": {
+        "auc": 0.8515569999546289,
+        "accuracy": 0.8416230366492147
+      },
+      "genz": {
+        "auc": 0.7679109267137817,
+        "accuracy": 0.7052930622009569
+      }
+    },
+    "travel+cls": {
+      "all": {
+        "auc": 0.805734120266729,
+        "accuracy": 0.8279950723744995
+      },
+      "genz": {
+        "auc": 0.9067978856814692,
+        "accuracy": 0.8286483253588517
+      }
+    },
+    "travel+service": {
+      "all": {
+        "auc": 0.9953976408745416,
+        "accuracy": 0.9831767785648291
+      },
+      "genz": {
+        "auc": 0.9961886478440749,
+        "accuracy": 0.9766746411483254
+      }
+    },
+    "travel+other": {
+      "all": {
+        "auc": 0.8347775503709234,
+        "accuracy": 0.8134431783184478
+      },
+      "genz": {
+        "auc": 0.9139856310725127,
+        "accuracy": 0.8640849282296651
+      }
+    },
+    "cls+service": {
+      "all": {
+        "auc": 0.9605392774814582,
+        "accuracy": 0.9170773021250385
+      },
+      "genz": {
+        "auc": 0.9042227769768996,
+        "accuracy": 0.8219198564593302
+      }
+    },
+    "cls+other": {
+      "all": {
+        "auc": 0.7038071229344964,
+        "accuracy": 0.8145980905451186
+      },
+      "genz": {
+        "auc": 0.6833371072278284,
+        "accuracy": 0.6285885167464115
+      }
+    },
+    "service+other": {
+      "all": {
+        "auc": 0.9589250637097853,
+        "accuracy": 0.9115722205112411
+      },
+      "genz": {
+        "auc": 0.906452703257035,
+        "accuracy": 0.8217703349282297
+      }
+    },
+    "age+travel+cls": {
+      "all": {
+        "auc": 0.9011985948064943,
+        "accuracy": 0.8756159531875577
+      },
+      "genz": {
+        "auc": 0.9221230852173506,
+        "accuracy": 0.829994019138756
+      }
+    },
+    "age+travel+service": {
+      "all": {
+        "auc": 0.9957596016224713,
+        "accuracy": 0.9849091469048352
+      },
+      "genz": {
+        "auc": 0.996223573948408,
+        "accuracy": 0.9772727272727273
+      }
+    },
+    "age+travel+other": {
+      "all": {
+        "auc": 0.9263415117638891,
+        "accuracy": 0.8853557129658146
+      },
+      "genz": {
+        "auc": 0.9194833280592571,
+        "accuracy": 0.8645334928229665
+      }
+    },
+    "age+cls+service": {
+      "all": {
+        "auc": 0.9738168228783791,
+        "accuracy": 0.9294733600246381
+      },
+      "genz": {
+        "auc": 0.934682559216155,
+        "accuracy": 0.8542165071770335
+      }
+    },
+    "age+cls+other": {
+      "all": {
+        "auc": 0.8636070836206915,
+        "accuracy": 0.8485525100092393
+      },
+      "genz": {
+        "auc": 0.7974313139481733,
+        "accuracy": 0.7274222488038278
+      }
+    },
+    "age+service+other": {
+      "all": {
+        "auc": 0.9747649041056162,
+        "accuracy": 0.9310902371419773
+      },
+      "genz": {
+        "auc": 0.9361878977532436,
+        "accuracy": 0.8543660287081339
+      }
+    },
+    "travel+cls+service": {
+      "all": {
+        "auc": 0.9958473034654882,
+        "accuracy": 0.9848321527563905
+      },
+      "genz": {
+        "auc": 0.9970727705308065,
+        "accuracy": 0.9816088516746412
+      }
+    },
+    "travel+cls+other": {
+      "all": {
+        "auc": 0.8734826968632585,
+        "accuracy": 0.8336926393594087
+      },
+      "genz": {
+        "auc": 0.9433707675538835,
+        "accuracy": 0.8761961722488039
+      }
+    },
+    "travel+service+other": {
+      "all": {
+        "auc": 0.9954674589410878,
+        "accuracy": 0.9840622112719434
+      },
+      "genz": {
+        "auc": 0.9963118033824407,
+        "accuracy": 0.9795155502392344
+      }
+    },
+    "cls+service+other": {
+      "all": {
+        "auc": 0.9697248869049164,
+        "accuracy": 0.9253156760086233
+      },
+      "genz": {
+        "auc": 0.9291320745871569,
+        "accuracy": 0.8438995215311005
+      }
+    },
+    "age+travel+cls+service": {
+      "all": {
+        "auc": 0.9964780620476615,
+        "accuracy": 0.9877964274715122
+      },
+      "genz": {
+        "auc": 0.9974417214584578,
+        "accuracy": 0.9829545454545454
+      }
+    },
+    "age+travel+cls+other": {
+      "all": {
+        "auc": 0.9379035626676997,
+        "accuracy": 0.8956729288574068
+      },
+      "genz": {
+        "auc": 0.9490138884005486,
+        "accuracy": 0.8859150717703349
+      }
+    },
+    "age+travel+service+other": {
+      "all": {
+        "auc": 0.9961684537799037,
+        "accuracy": 0.9862950415768401
+      },
+      "genz": {
+        "auc": 0.9960903390644962,
+        "accuracy": 0.9805622009569378
+      }
+    },
+    "age+cls+service+other": {
+      "all": {
+        "auc": 0.9814680485596043,
+        "accuracy": 0.9415999384046813
+      },
+      "genz": {
+        "auc": 0.9542324578366912,
+        "accuracy": 0.878738038277512
+      }
+    },
+    "travel+cls+service+other": {
+      "all": {
+        "auc": 0.9959116457017149,
+        "accuracy": 0.985525100092393
+      },
+      "genz": {
+        "auc": 0.9968073321378761,
+        "accuracy": 0.9822069377990431
+      }
+    },
+    "age+travel+cls+service+other": {
+      "all": {
+        "auc": 0.9966699965422074,
+        "accuracy": 0.9886818601786265
+      },
+      "genz": {
+        "auc": 0.9970849595068152,
+        "accuracy": 0.9845992822966507
+      }
+    }
+  },
+  "na_departure_convenience_business": {
+    "disloyal_share_when_0": 0.7364026179192056,
+    "disloyal_share_overall": 0.2626055404368153
+  }
+}
